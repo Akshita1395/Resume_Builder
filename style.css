@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+body.light {
+  background: linear-gradient(to right, #d1e8ff, #e0ffe0, #fff1f8);
+  color: #222;
+}
+body.dark {
+  background: linear-gradient(to right, #1a1a1a, #2c3e50);
+  color: #f0f0f0;
+}
+.main-container {
+  text-align: center;
+  padding: 80px 20px;
+}
+.main-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.main-description {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+.primary-btn {
+  margin-top: 30px;
+  margin-right: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+body.light .primary-btn {
+  background-color: #0066ff;
+  color: white;
+}
+body.dark .primary-btn {
+  background-color: #4682b4;
+  color: #f0f0f0;
+}
+body.light .primary-btn:hover {
+  background-color: #004bb5;
+}
+body.dark .primary-btn:hover {
+  background-color: #36648b;
+}
+.primary-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.modal {
+  display: none; /* Ensure modals are hidden on load */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  width: 90vw;
+  height: 90vh;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+body.light .modal-content {
+  background: white;
+  color: #222;
+}
+body.dark .modal-content {
+  background: #2f4f4f;
+  color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(176, 196, 222, 0.7); /* Sparkly outline */
+}
+.preview-content {
+  width: 90vw;
+  height: 90vh;
+}
+.scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollable::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+body.dark .scrollable::-webkit-scrollbar-thumb {
+  background: #666;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+body.light .close {
+  color: #222;
+}
+body.dark .close {
+  color: #f0f0f0;
+}
+.form-block {
+  margin-bottom: 20px;
+}
+.form-block label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+.form-block input, .form-block textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+body.light .form-block input, body.light .form-block textarea {
+  border: 1px solid #aaa;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 0 5px rgba(0, 102, 255, 0.5); /* Sparkly outline for light mode */
+}
+body.dark .form-block input, body.dark .form-block textarea {
+  border: 1px solid #666;
+  background: #3c565b;
+  color: #f0f0f0;
+  box-shadow: 0 0 5px rgba(176, 196, 222, 0.7); /* Sparkly outline for dark mode */
+}
+.form-error {
+  color: red;
+  display: none;
+  font-size: 0.9rem;
+}
+body.dark .form-error {
+  color: #ff6666;
+}
+.resume-preview {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+body.light .resume-preview {
+  border: 1px solid #ccc;
+}
+body.dark .resume-preview {
+  border: 1px solid #666;
+}
+.resume-preview.modern {
+  font-family: 'Arial', sans-serif;
+}
+body.light .resume-preview.modern {
+  background: #f9f9f9;
+  border-left: 5px solid #0066ff;
+}
+body.dark .resume-preview.modern {
+  background: #3c565b;
+  border-left: 5px solid #4682b4;
+}
+.resume-preview.classic {
+  font-family: 'Times New Roman', serif;
+}
+body.light .resume-preview.classic {
+  background: #fff;
+  border: 2px solid #000;
+}
+body.dark .resume-preview.classic {
+  background: #2f4f4f;
+  border: 2px solid #f0f0f0;
+}
+.resume-preview.minimal {
+  font-family: 'Helvetica', sans-serif;
+}
+body.light .resume-preview.minimal {
+  background: #fff;
+  border: none;
+}
+body.dark .resume-preview.minimal {
+  background: #2f4f4f;
+  border: none;
+}
+.resume-preview h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.resume-preview p {
+  margin: 5px 0;
+}
+#templateSelect {
+  margin: 10px 0;
+  padding: 5px;
+  font-size: 1rem;
+}
+body.light #templateSelect {
+  background: #fff;
+  color: #222;
+}
+body.dark #templateSelect {
+  background: #3c565b;
+  color: #f0f0f0;
+}

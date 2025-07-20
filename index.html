@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="light">
+  <div class="main-container">
+    <h1 class="main-title">Smart Resume Builder</h1>
+    <p class="main-description">
+      Welcome to the Smart Resume Builder — your gateway to creating professional,
+      polished resumes tailored for top tech companies like Google, Microsoft, and more.
+      Enter your details, select a modern design template, and we’ll generate a refined
+      resume that speaks your professional story clearly and effectively.
+    </p>
+    <button class="primary-btn" onclick="openForm()">Start Building</button>
+    <button class="primary-btn" onclick="toggleTheme()">Toggle Theme</button>
+  </div>
+
+  <div class="modal" id="formModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeForm()">×</span>
+      <h2>Enter Resume Details</h2>
+      <div id="formMessage" style="display: none; color: green; text-align: center;"></div>
+      <div id="formFields" class="scrollable"></div>
+      <button class="primary-btn" onclick="addSection()">Add Another Section</button>
+      <button class="primary-btn" onclick="submitForm()">Generate Resume</button>
+    </div>
+  </div>
+
+  <div class="modal" id="previewModal">
+    <div class="modal-content preview-content">
+      <span class="close" onclick="closePreview()">×</span>
+      <h2>Resume Preview</h2>
+      <select id="templateSelect" onchange="updatePreview()">
+        <option value="modern">Modern</option>
+        <option value="classic">Classic</option>
+        <option value="minimal">Minimal</option>
+      </select>
+      <div id="previewContent" class="resume-preview"></div>
+      <button class="primary-btn" onclick="downloadPDF()">Download PDF</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
